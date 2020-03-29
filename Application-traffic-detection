@@ -1,1 +1,15 @@
 
+For application traffic detection we use ‘tcpreplay’ for replaying the previously captured traffic in a pcap
+file.
+
+    ● We can do tcpreplay from another Ubuntu vm setting the interface to the snort vm (or) we can just do
+    tcpreplay from same Ubuntu vm where snort is installed using the localhost interface.
+    
+    ● Installation process of tcpreplay -
+        wget https://sourceforge.net/projects/tcpreplay/files/tcpreplay/4.3.2/tcpreplay-4.3.2.tar.gz
+        tar xf tcpreplay-4.3.2.tar.gz
+        cd tcpreplay-4.3.2/
+        ./configure
+        make
+        sudo make install
+        tcpreplay -V (for checking the version)
