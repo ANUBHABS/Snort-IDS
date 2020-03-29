@@ -1,0 +1,45 @@
+  
+Before installation of snort -
+    sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
+  
+Now download and install snort -
+    cd ~/snort_src
+    wget https://www.snort.org/downloads/snort/snort-2.9.15.1.tag.gz
+    tar -xvzf snort-2.9.15.1.tar.gz
+    cd snort-2.9.15.1/
+    ./configure --enable-sourcefire
+    make
+    sudo make install
+    
+Now check the snort version -
+    snort -V
+    
+Create the Snort directories -
+    sudo mkdir /etc/snort
+    sudo mkdir /etc/snort/rules
+    sudo mkdir /etc/snort/iplists
+    sudo mkdir /etc/snort/preproc_rules
+    sudo mkdir /usr/local/lib/snort_dynamicrules
+    sudo mkdir /etc/snort/so_rules
+    
+Create some files that stores rules and iplists -
+    sudo touch /etc/snort/rules/iplists/black_list.rules
+    sudo touch /etc/snort/rules/iplists/white_list.rules
+    sudo touch /etc/snort/rules/local.rules
+    sudo touch /etc/snort/sid-msg.map
+
+Create our logging directories -
+    sudo mkdir /var/log/snort
+    (Everytime when we run the snort we found one
+    pcap file here as log. And all the components
+    whatever used in the snort rule will reflect in
+    this pcap file)
+    sudo mkdir/var/log/snort/archived_logs
+    
+    cd ~/snort_src/snort-2,9.15.1/etc
+    sudo cp *.conf* /etc/snort
+    sudo cp *.map /etc/snort
+    sudo cp *.dtd /etc/snort
+    cd ~/snort_src/snort-2.9.15.1/src/dynamic-preprocessors/build/usr/local/lib/snort_dynamicpreprocessor/
+    cd cp * /usr/local/lib/snort_dynamicprepocessor
+    
