@@ -1,0 +1,24 @@
+  Snort is a free open source network intrusion detection system and intrusion
+prevention system, capable of performing real-time traffic analysis and packet
+logging on IP network.
+
+  Snort is created in 1998 by Martin Roesch, founder and former CTO of
+Sourcefire.
+
+Snort is now developed by Cisco, which purchased Sourcefire in 2013.
+  
+Features of Snort :-
+● Lightweight
+● Free Open Source
+● Portable
+● Runs on Linux, HP-UX, Solaris, Win2K etc.
+● Configurable with easy setup
+
+Snort Modes
+● Packet Sniffer
+● Packet Logger
+● Preemptive IDS
+  - Actively monitors network traffic in real time to match intrusion signatures and
+   send alerts
+   
+  
