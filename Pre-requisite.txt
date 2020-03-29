@@ -1,0 +1,13 @@
+
+On Ubuntu 18.04 LTS -
+    1. Wireshark - For packet capture
+    2. PCRE - Perl Compatible Regular Expression
+    3. Libnet - Network Functions
+    4. DAQ - Data AcQuisition Modes
+    
+i) sudo apt-get install -y build-essential (reference for all packages needed to compile a Debian
+package)
+ii) sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
+iii) mkdir ~/snort_src
+iv) cd ~/snort_src
+
