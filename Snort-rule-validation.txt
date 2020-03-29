@@ -1,0 +1,14 @@
+
+Everytime before running the Snort we have to first validate the Snort rule.
+
+    ● There has a file called snort.conf in the /etc/snort/snort.conf directory.
+        sudo gedit /etc/snort/snort.conf
+    It’s the snort configuration file . Here we have to define all network addresses ,
+    paths for the RULE_PATH, SO_RULE_PATH, PREPROC_RULE_PATH,
+    BLACK_LIST_PATH and WHITE_LIST_PATH,
+    and the path for the local.rules path where the snort rules are present.
+    
+    ● To validate the snort rule -
+        sudo snort -T -c /etc/snort/snort.conf -i <interface name>
+       
+   
