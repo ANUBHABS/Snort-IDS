@@ -1,0 +1,18 @@
+
+● Here we use the localhost interface.
+
+● To validate any snort rule -
+    ■ sudo snort -T -c /etc/snort/snort.conf -i lo
+    
+● To run the Snort -
+    ■ sudo snort -A console -q -c /etc/snort/snort.conf -i lo
+    
+● To run the tcpreplay -
+    ■ sudo tcpreplay -i lo <pcap file name>
+    
+● Here we can also use different flags in the tcpreplay command -
+    -t -> for sending the application traffic in full speed
+    -K -> the .pcap is first pre-loaded in the memory (next field is pcap file name)
+    --loop 500 -> for looping 500 times (we can use any loop count)
+    lo -> localhost interface (check by typing ifconfig)
+    Example -> sudo tcpreplay -i lo -t -K --loop 500 --unique-ip example.pcap
