@@ -8,17 +8,17 @@ Sourcefire.
 Snort is now developed by Cisco, which purchased Sourcefire in 2013.
   
 Features of Snort :-
-● Lightweight
-● Free Open Source
-● Portable
-● Runs on Linux, HP-UX, Solaris, Win2K etc.
-● Configurable with easy setup
+    ● Lightweight
+    ● Free Open Source
+    ● Portable
+    ● Runs on Linux, HP-UX, Solaris, Win2K etc.
+    ● Configurable with easy setup
 
 Snort Modes
-● Packet Sniffer
-● Packet Logger
-● Preemptive IDS
-  - Actively monitors network traffic in real time to match intrusion signatures and
-   send alerts
+    ● Packet Sniffer
+    ● Packet Logger
+    ● Preemptive IDS
+      - Actively monitors network traffic in real time to match intrusion signatures and
+       send alerts
    
   
