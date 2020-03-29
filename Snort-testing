@@ -1,0 +1,14 @@
+
+All the snort rules will be present inside the /etc/snort/rules/local.rules
+    sudo gedit /etc/snort/rules/local.rules    
+    
+● Here, we can comment out any rule by including ‘#’ at the beginning of the rule.
+
+● For any types of protocol(TCP, ICMP, FTP) testing we can just ping the Ubuntu machine where snort is
+  installed from outside(any other Ubuntu m/c or windows)
+  
+● And to test the Snort rule -
+    sudo snort -A console -q -c /etc/snort/snort.conf -i <interface name>
+    
+● If it executes fine we will see the alert message present in the snort rule on the terminal. And also we’ll
+  find one pcap file as log inside the /var/log/snort directory
