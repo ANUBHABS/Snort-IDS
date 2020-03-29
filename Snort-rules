@@ -1,0 +1,45 @@
+
+● Snort rules are extremely flexible and are easy to modify, unlike many other
+  commercial NDS.
+  
+● Sample rule - 
+    alert icmp any any -> any any (msg:"icmp traffic detected"; sid:1000005; rev:1)
+    
+    
+  
+---------------------Rule Header-----------------------
+
+● Actions can be of 3 types -
+    alert - if the snort rule matches with the traffic then it will alert with the message
+    drop - if the snort rule matches with the traffic then it will drop the traffic
+    log - if the snort rule matches with the traffic then it will log the it
+    
+● Protocol will be of different types - tcp, icmp, ftp etc.
+
+● Source ip address can be a particular ip address or a subnet or any(by default) or EXTERNAL_NET
+  defined in the snort.conf file.
+  
+● Source port can be any particular port or any
+
+● Direction can be -> (forward), <- (bachward) or <-> (both direction)
+
+● Destination ip address can be a particular ip address or a subnet or any(by default) or HOME_NET
+  defined in the snort.conf file.
+  
+● Destination port can be any particular port or any
+
+
+
+-----------------Rule Options--------------------
+
+● msg : “alert message” -> it contains the alert message
+
+● sid ->  used to uniquely identify the snort rule
+          <100 -> Reserved for future use
+          100-999,999 -> Rules included with the Snort distribution
+          >=1,000,000 -> Used for local rules
+          
+● rev -> Used to uniquely identify revision number of the Snort rules. It is used along with the sid
+
+● There are also many others options present like -
+  content, flow, depth, offset, distance, classtype, pcre, within etc.
